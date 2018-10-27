@@ -10,6 +10,8 @@ import UIKit
 
 class SolutionTypeaheadViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    // MARK: - Properties
+
     let searchField = UITextField()
 
     let tableView = UITableView(frame: .zero)
@@ -19,10 +21,12 @@ class SolutionTypeaheadViewController: UIViewController, UITableViewDataSource, 
     var searchResults = [SearchResult]()
 
     // Dictionary for caching results
-    var resultsForQuery: [String: [SearchResult]] = [:]
+    var cachedResults: [String: [SearchResult]] = [:]
 
     // Canceable dispatch work item
     var pendingAutocompleteRequest: DispatchWorkItem?
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +52,10 @@ class SolutionTypeaheadViewController: UIViewController, UITableViewDataSource, 
 
     // Called when the text in searchField is updated
     func searchTextDidUpdate(textField: UITextField) {
-        guard let text = textField.text else {
+        guard let searchText = textField.text else {
             return
         }
-        if let results = self.resultsForQuery[text] {
+        if let results = self.cachedResults[searchText] {
             self.searchResults = results
             self.tableView.reloadData()
             return
@@ -62,9 +66,13 @@ class SolutionTypeaheadViewController: UIViewController, UITableViewDataSource, 
             guard let strongSelf = self else {
                 return
             }
-            strongSelf.autocompleteService.fetchResults(forQuery: text) { (searchResults: [SearchResult], error: NSError?) in
+            strongSelf.autocompleteService.fetchResults(forQuery: searchText) { [searchText] (searchResults: [SearchResult], error: NSError?) in
                 if let error = error {
                     NSLog(error.localizedDescription)
+                    return
+                }
+                guard searchText == strongSelf.searchField.text else {
+                    // Do not update UI if the search query does not match our current query
                     return
                 }
                 if searchResults.isEmpty {
@@ -72,7 +80,7 @@ class SolutionTypeaheadViewController: UIViewController, UITableViewDataSource, 
                     return
                 }
                 strongSelf.searchResults = searchResults
-                strongSelf.resultsForQuery[text] = searchResults
+                strongSelf.cachedResults[searchText] = searchResults
                 DispatchQueue.main.async {
                     strongSelf.tableView.reloadData()
                 }

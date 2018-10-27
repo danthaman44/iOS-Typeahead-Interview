@@ -17,6 +17,12 @@
 		FA27F5CE2140C86200BDDA9F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27F5CD2140C86200BDDA9F /* SearchResult.swift */; };
 		FA27F5D02140C98300BDDA9F /* AutocompleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27F5CF2140C98300BDDA9F /* AutocompleteService.swift */; };
 		FA27F5D22140CD1900BDDA9F /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27F5D12140CD1900BDDA9F /* SearchResultCell.swift */; };
+		FA336D5C217FF8F200C07DBA /* TypeaheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA336D5B217FF8F200C07DBA /* TypeaheadViewController.m */; };
+		FA8C8C69218000F600C4D8D3 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8C8C68218000F600C4D8D3 /* SearchResultCell.m */; };
+		FA8C8C6C2180024B00C4D8D3 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8C8C6B2180024B00C4D8D3 /* SearchResult.m */; };
+		FA8C8C6F218005DC00C4D8D3 /* AutocompleteService.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8C8C6E218005DC00C4D8D3 /* AutocompleteService.m */; };
+		FA8C8C7221800B1600C4D8D3 /* SolutionTypeaheadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C8C7121800B1600C4D8D3 /* SolutionTypeaheadViewController.swift */; };
+		FA8C8C7521800B3000C4D8D3 /* SolutionTypeaheadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8C8C7421800B3000C4D8D3 /* SolutionTypeaheadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,18 @@
 		FA27F5CD2140C86200BDDA9F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		FA27F5CF2140C98300BDDA9F /* AutocompleteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteService.swift; sourceTree = "<group>"; };
 		FA27F5D12140CD1900BDDA9F /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		FA336D59217FF8F200C07DBA /* CapitalOneInterview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CapitalOneInterview-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA336D5A217FF8F200C07DBA /* TypeaheadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeaheadViewController.h; sourceTree = "<group>"; };
+		FA336D5B217FF8F200C07DBA /* TypeaheadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypeaheadViewController.m; sourceTree = "<group>"; };
+		FA8C8C67218000F600C4D8D3 /* SearchResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
+		FA8C8C68218000F600C4D8D3 /* SearchResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		FA8C8C6A2180024B00C4D8D3 /* SearchResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
+		FA8C8C6B2180024B00C4D8D3 /* SearchResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		FA8C8C6D218005DC00C4D8D3 /* AutocompleteService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutocompleteService.h; sourceTree = "<group>"; };
+		FA8C8C6E218005DC00C4D8D3 /* AutocompleteService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutocompleteService.m; sourceTree = "<group>"; };
+		FA8C8C7121800B1600C4D8D3 /* SolutionTypeaheadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolutionTypeaheadViewController.swift; sourceTree = "<group>"; };
+		FA8C8C7321800B3000C4D8D3 /* SolutionTypeaheadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SolutionTypeaheadViewController.h; sourceTree = "<group>"; };
+		FA8C8C7421800B3000C4D8D3 /* SolutionTypeaheadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SolutionTypeaheadViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +121,15 @@
 		FA27F59E2140C75D00BDDA9F /* CapitalOneInterview */ = {
 			isa = PBXGroup;
 			children = (
+				FA8C8C7021800B1600C4D8D3 /* Solution */,
+				FA336D5E217FF95100C07DBA /* ObjC */,
+				FA336D5D217FF92300C07DBA /* Swift */,
 				FA27F59F2140C75D00BDDA9F /* AppDelegate.swift */,
-				FA27F5A12140C75D00BDDA9F /* TypeaheadViewController.swift */,
-				FA27F5CD2140C86200BDDA9F /* SearchResult.swift */,
 				FA27F5A32140C75D00BDDA9F /* Main.storyboard */,
 				FA27F5A62140C75E00BDDA9F /* Assets.xcassets */,
 				FA27F5A82140C75E00BDDA9F /* LaunchScreen.storyboard */,
 				FA27F5AB2140C75E00BDDA9F /* Info.plist */,
-				FA27F5CF2140C98300BDDA9F /* AutocompleteService.swift */,
-				FA27F5D12140CD1900BDDA9F /* SearchResultCell.swift */,
+				FA336D59217FF8F200C07DBA /* CapitalOneInterview-Bridging-Header.h */,
 			);
 			path = CapitalOneInterview;
 			sourceTree = "<group>";
@@ -133,6 +151,42 @@
 			);
 			path = CapitalOneInterviewUITests;
 			sourceTree = "<group>";
+		};
+		FA336D5D217FF92300C07DBA /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				FA27F5CD2140C86200BDDA9F /* SearchResult.swift */,
+				FA27F5A12140C75D00BDDA9F /* TypeaheadViewController.swift */,
+				FA27F5CF2140C98300BDDA9F /* AutocompleteService.swift */,
+				FA27F5D12140CD1900BDDA9F /* SearchResultCell.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		FA336D5E217FF95100C07DBA /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				FA336D5A217FF8F200C07DBA /* TypeaheadViewController.h */,
+				FA336D5B217FF8F200C07DBA /* TypeaheadViewController.m */,
+				FA8C8C67218000F600C4D8D3 /* SearchResultCell.h */,
+				FA8C8C68218000F600C4D8D3 /* SearchResultCell.m */,
+				FA8C8C6A2180024B00C4D8D3 /* SearchResult.h */,
+				FA8C8C6B2180024B00C4D8D3 /* SearchResult.m */,
+				FA8C8C6D218005DC00C4D8D3 /* AutocompleteService.h */,
+				FA8C8C6E218005DC00C4D8D3 /* AutocompleteService.m */,
+			);
+			path = ObjC;
+			sourceTree = "<group>";
+		};
+		FA8C8C7021800B1600C4D8D3 /* Solution */ = {
+			isa = PBXGroup;
+			children = (
+				FA8C8C7121800B1600C4D8D3 /* SolutionTypeaheadViewController.swift */,
+				FA8C8C7321800B3000C4D8D3 /* SolutionTypeaheadViewController.h */,
+				FA8C8C7421800B3000C4D8D3 /* SolutionTypeaheadViewController.m */,
+			);
+			path = Solution;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -202,6 +256,7 @@
 				TargetAttributes = {
 					FA27F59B2140C75D00BDDA9F = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					FA27F5AF2140C75E00BDDA9F = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -268,7 +323,13 @@
 				FA27F5A22140C75D00BDDA9F /* TypeaheadViewController.swift in Sources */,
 				FA27F5CE2140C86200BDDA9F /* SearchResult.swift in Sources */,
 				FA27F5A02140C75D00BDDA9F /* AppDelegate.swift in Sources */,
+				FA8C8C7221800B1600C4D8D3 /* SolutionTypeaheadViewController.swift in Sources */,
+				FA8C8C69218000F600C4D8D3 /* SearchResultCell.m in Sources */,
+				FA8C8C6F218005DC00C4D8D3 /* AutocompleteService.m in Sources */,
 				FA27F5D02140C98300BDDA9F /* AutocompleteService.swift in Sources */,
+				FA336D5C217FF8F200C07DBA /* TypeaheadViewController.m in Sources */,
+				FA8C8C6C2180024B00C4D8D3 /* SearchResult.m in Sources */,
+				FA8C8C7521800B3000C4D8D3 /* SolutionTypeaheadViewController.m in Sources */,
 				FA27F5D22140CD1900BDDA9F /* SearchResultCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CapitalOneInterview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,6 +512,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DanDeng.CapitalOneInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CapitalOneInterview/CapitalOneInterview-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CapitalOneInterview/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -467,6 +532,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = DanDeng.CapitalOneInterview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CapitalOneInterview/CapitalOneInterview-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -22,10 +22,16 @@ class TypeaheadViewController: UIViewController, UITableViewDataSource, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setup searchField
+        self.view.addSubview(self.searchField)
+        self.searchField.addTarget(self, action: #selector(searchTextDidUpdate), for: .editingChanged)
+
+        // Setup tableView
+        self.view.addSubview(self.tableView)
         self.tableView.register(SearchResultCell.self, forCellReuseIdentifier: SearchResultCell.reuseIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.searchField.addTarget(self, action: #selector(searchTextDidUpdate), for: .editingChanged)
     }
 
     // MARK: - Table view data source
